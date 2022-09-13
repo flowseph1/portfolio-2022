@@ -8,7 +8,7 @@ const redes = [
 
 function Redes() {
     return (
-        <div className="space-y-1">
+        <div className="flex items-center space-x-4">
             {redes.map(red => (
                 <Red key={red.nombre} nombre={red.nombre} url={red.url} icono={red.icono} />
             ))}
