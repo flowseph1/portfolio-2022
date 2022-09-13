@@ -1,26 +1,57 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'kenyan';
+    src: url('../assets/fonts/kenyan\ coffee\ rg.ttf');
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+    font-family: 'autography';
+    src: url('../assets/fonts/Autography.otf');
 }
 
-* {
-  box-sizing: border-box;
+@font-face {
+    font-family: 'lato';
+    src: url('../assets/fonts/Lato-Regular.ttf');
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+@font-face {
+    font-family: 'newake';
+    src: url('../assets/fonts/Newake-Font-Demo.otf');
+}
+
+@font-face {
+    font-family: 'creme';
+    src: url('../assets/fonts/Creme\ Espana.ttf');
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../assets/fonts/Montserrat-Regular.otf');
+}
+
+@layer base {
+    html {
+        @apply font-lato;
+    }
+}
+
+@layer components {
+    .style-font {
+        @apply font-kenyan;
+    }
+
+    .cursive-font {
+        @apply font-autography;
+    }
+
+    .boton {
+        @apply text-sm py-2 px-4 bg-blue-700 rounded-full text-white hover:bg-blue-800 transition flex space-x-2 items-center w-fit;
+    }
+
+    .boton2 {
+        @apply font-semibold text-sm py-2 px-4 bg-gradient-to-r from-pink-500 to-indigo-500 rounded-full text-white transition-all flex space-x-2 items-center w-fit cursor-pointer hover:shadow-md hover:!text-white;
+    }
 }
